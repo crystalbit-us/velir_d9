@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for velir_tools module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+function velir_tools_preprocess_node(&$variables) {
+  // Custom Velir settings
+  $velir_settings = \Drupal::config('velir_tools.settings');
+//  $velir_content_entity_svc = \Drupal::service('velir_tools.normalizer');
+
+//  $velir_content_entity_svc->normalize($variables['node']);
+}
+
+
+

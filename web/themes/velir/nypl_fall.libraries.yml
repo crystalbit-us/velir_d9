@@ -1,0 +1,43 @@
+# Main theme library.
+global:
+  js:
+    js/nypl-fall.js: {}
+  css:
+    base:
+      css/base/elements.css: {}
+    component:
+      css/components/block.css: {}
+      css/components/breadcrumb.css: {}
+      css/components/field.css: {}
+      css/components/form.css: {}
+      css/components/header.css: {}
+      css/components/menu.css: {}
+      css/components/messages.css: {}
+      css/components/node.css: {}
+      css/components/sidebar.css: {}
+      css/components/table.css: {}
+      css/components/tabs.css: {}
+      css/components/buttons.css: {}
+    layout:
+      css/layouts/layout.css: {}
+    theme:
+      css/theme/cards.css: {}
+      css/theme/print.css: { media: print }
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+bootstrap_cdn:
+  js: 
+    https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js: {}
+  css:
+    base:
+      https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

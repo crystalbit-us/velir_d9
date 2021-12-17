@@ -1,0 +1,102 @@
+.js-form-item-field-items-0-subform-field-sku-0-target-id {
+display: inline;
+float: right;
+}
+
+.draggable > td:nth-child(2) {
+clear: both;
+}
+
+div.js-form-type-number:nth-child(1) {
+width: fit-content;
+}
+
+#edit-field-items-0-subform-field-qty-wrapper {
+float: left;
+}
+
+table.views-table {
+border:1px solid #111;
+table-layout:fixed;
+width:100%;
+}
+
+table.views-table tr th {
+        background-color:beige;
+	border: 1px solid #CCC;
+}
+td.is-active {
+background-color:transparent !important;
+}
+table.views-table tr th, table.views-table tr td {
+	border:1px solid #CCC;
+       	padding:5px;
+}
+
+table.views-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.feed-icon {
+display:none;
+}
+.card-header { background-color: #00a1b0 ; }
+
+.card-subheader { background-color: #cbe8cb; }
+
+.card-exhibit-title {
+	 background-color: #efedeb;
+	color: #9733a6;
+}
+
+
+
+.card-date-info {
+	font-weight: bold;
+	padding:10px;
+}
+
+
+
+.card-exhibit-details {
+background-color: #f8f8f7; 
+}
+
+.img-card {
+	display: inline;
+}
+
+.library-name-card {
+	font-weight: 700;
+	margin: 5px 0;
+	padding:10px;
+}
+
+.startend-date-card {
+		border: 1px solid #ccc;
+background-color: #F0F0F0;
+padding:10px;
+}
+
+.body-card {
+		border: 1px solid #CCC;
+		background-color: #F0F0F0;
+margin:5px 0;
+font-size:14px;
+padding:10px;
+}
+
+.tags-card {
+	padding:10px;
+	background-color: #F0F0F0;
+	clear:both;
+}
+
+
+.field--name-field-start-date {
+       float: left;
+       width: auto;
+}
+
+

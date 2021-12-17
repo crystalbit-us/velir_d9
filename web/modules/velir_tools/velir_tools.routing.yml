@@ -1,0 +1,28 @@
+velir_tools.example:
+  path: '/hello-velir-1'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\velir_tools\Controller\VelirToolsController::build'
+  requirements:
+    _permission: 'access content'
+velir_tools.example2:
+  path: '/hello-velir-2'
+  defaults:
+    _title: 'Example 2'
+    _controller: '\Drupal\velir_tools\Controller\VelirToolsController::buildJson'
+  requirements:
+    _permission: 'access content'
+velir_tools.example3:
+  path: '/hello-velir-3'
+  defaults:
+    _title: 'Example 3'
+    _controller: '\Drupal\velir_tools\Controller\VelirToolsController::build'
+  requirements:
+    _permission: 'administer'
+velir_tools.settings_form:
+  path: '/admin/config/system/velir-tools'
+  defaults:
+    _title: 'velir_tools settings'
+    _form: 'Drupal\velir_tools\Form\SettingsForm'
+  requirements:
+    _permission: 'administer velir_tools configuration'

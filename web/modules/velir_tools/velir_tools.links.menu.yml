@@ -1,0 +1,6 @@
+velir_tools.settings_form:
+  title: velir_tools
+  description: Configure velir_tools.
+  parent: system.admin_config_system
+  route_name: velir_tools.settings_form
+  weight: 10

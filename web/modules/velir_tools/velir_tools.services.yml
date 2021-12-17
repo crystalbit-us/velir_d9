@@ -1,0 +1,11 @@
+services:
+  velir_tools.event_subscriber:
+    class: Drupal\velir_tools\EventSubscriber\VelirToolsSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
+  velir_tools.normalizer:
+    class: Drupal\velir_tools\Normalizer\VelirContentEntityNormalizer
+    tags:
+      - { name: normalizer, priority: 8  }
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']        

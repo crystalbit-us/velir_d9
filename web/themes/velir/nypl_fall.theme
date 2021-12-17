@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the NYPL Fall theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function nypl_fall_preprocess_html(&$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function nypl_fall_preprocess_page(&$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function nypl_fall_preprocess_node(&$variables) {
+
+}
+
+function nypl_fall_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+  if (isset($variables['field_name'])) {
+    if ($variables['field_name'] == 'field_start_date' 
+		|| $variables['field_name'] == 'field_end_date' ) {
+        $variables['classes_array'][] = 'card-date-custom';
+	$dash = '';
+	if ($variables['field_name'] == 'field_start_date') {
+		$dash .= ' -&nbsp;';
+	}	
+
+	if (!empty($variables['items'][0]['content']['#markup']))
+	$date = $variables['items'][0]['content']['#markup'];
+	if (!empty($variables['items'][0]['content']['#markup']) 
+		&& empty($date)) {
+	  $date = $variables['items'][0]['content']['#text']; 
+	}
+	$date = _nypl_fall_date_helper($date) . $dash;
+
+	if (isset($variables['items'][0]['content']['#markup'])) {
+	  $variables['items'][0]['content']['#markup'] = $date;
+	}
+	if (isset($variables['items'][0]['content']['#text'])) {
+	  $variables['items'][0]['content']['#text'] = $date; 
+	}
+    }
+  }
+}
+
+
+function nypl_fall_page_attachments_alter(&$page) {
+  $page['#attached']['library'][] = 'nypl_fall/global';
+  $page['#attached']['library'][] = 'nypl_fall/bootstrap_cdn';
+}
+
+function _nypl_fall_date_helper($date) {
+$before_or_on_today = strtotime($date) < time();
+if($before_or_on_today) {
+$date = 'Now';
+}
+else {
+$date = date('F j, Y', strtotime($date));
+}
+return $date;
+}
+
+
+
